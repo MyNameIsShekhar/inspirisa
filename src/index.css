@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Backgrounds */
+    --background: 0 0% 100%; /* #FFFFFF (pure white background) */
+    --foreground: 0 0% 13%; /* #212121 (dark text) */
+    --card: 0 0% 98%; /* A lighter shade for card background */
+    --card-foreground: 0 0% 13%; /* #212121 (dark text for cards) */
+    --popover: 0 0% 98%; /* Popover background similar to cards */
+    --popover-foreground: 0 0% 13%; /* Dark text for popovers */
+
+    /* Primary colors */
+    --primary: 289 72% 35%; /* #6A1B9A */
+    --primary-foreground: 296 43% 95%; /* #F3E5F5 (lighter shade to contrast with primary) */
+
+    /* Secondary (derived for a softer accent) */
+    --secondary: 270 20% 88%; /* Soft lavender for secondary elements */
+    --secondary-foreground: 0 0% 13%; /* #212121 (dark text) */
+
+    /* Muted colors (subtle background tones) */
+    --muted: 270 10% 96%; /* Light grayish lavender */
+    --muted-foreground: 0 0% 35%; /* Darker muted text */
+
+    /* Accent */
+    --accent: 51 100% 50%; /* #FFD700 */
+    --accent-foreground: 0 0% 13%; /* Dark text on accent background */
+
+    /* Destructive (keep as default) */
+    --destructive: 0 84.2% 60.2%; /* Keep default for warnings */
+    --destructive-foreground: 0 0% 98%; /* White foreground for destructive elements */
+
+    /* Border and input colors */
+    --border: 289 72% 35%; /* #6A1B9A (same as primary for borders) */
+    --input: 270 20% 96%; /* A soft light lavender for inputs */
+
+    /* Ring (focus outline) */
+    --ring: 289 72% 35%; /* #6A1B9A (primary color for focus rings) */
+
+    /* Chart colors (updated to harmonize) */
+    --chart-1: 289 72% 35%; /* Harmonized chart color (matches primary) */
+    --chart-2: 51 100% 50%; /* #FFD700 (matches accent) */
+    --chart-3: 0 100% 50%; /* Bright red for chart variations */
+    --chart-4: 43 74% 66%; /* Bright green for contrast */
+    --chart-5: 27 87% 67%; /* Orange-yellow for warmth */
+
+    /* Radius */
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
