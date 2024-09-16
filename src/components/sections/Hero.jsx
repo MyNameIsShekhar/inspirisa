@@ -14,24 +14,24 @@ export default function Hero() {
       <MainHero />
       <section className="my-section space-y-8">
         <div className="flex flex-col items-center border border-muted space-y-4 py-2">
-          <h3 className="text-heading-3 font-playfair">
+          <h3 className="text-heading-3 font-playfair text-center">
             OUR BUSINESS PARTNERS
           </h3>
           <div className="flex">
             <img
               src="/hero/partner.png"
               alt="partner"
-              className="h-12 sm:h-20"
+              className="h-10 md:h-20"
             />
             <img
               src="/hero/partner.png"
               alt="partner"
-              className="h-12 sm:h-20"
+              className="h-10 md:h-20"
             />
             <img
               src="/hero/partner.png"
               alt="partner"
-              className="h-12 sm:h-20"
+              className="h-10 md:h-20"
             />
           </div>
         </div>
@@ -53,12 +53,14 @@ function MainHero() {
             <span className="text-heading-5 font-medium">Global Community</span>
             <i className="font-playfair">Since 2017</i>
           </div>
-          <h1 className="text-display-5 sm:text-display-3 font-playfair">
+          <h1 className="text-heading-1 lg:text-display-3 font-playfair">
             EMPOWERING{" "}
             <span>
               <span className="text-primary">
                 {" "}
-                <span className="font-pinyon text-display-4 mr-4">W</span>
+                <span className="font-pinyon text-display-4 lg:text-[92px] mr-4">
+                  W
+                </span>
                 <span>OMEN</span>{" "}
               </span>{" "}
               <i>through</i>

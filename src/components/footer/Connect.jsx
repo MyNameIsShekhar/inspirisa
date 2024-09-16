@@ -28,7 +28,7 @@ export default function Connect() {
         <h4 className="text-heading-4 mt-2">
           We're here to spark the thrill of possibility
         </h4>
-        <div className="flex gap-8">
+        <div className="flex gap-2 sm:gap- 4 md:gap-8">
           {socialLinks.map((link, index) => (
             <a
               href={link.href}

@@ -40,7 +40,7 @@ export default function Navbar() {
       }`}
     >
       <section
-        className={`z-50 bg-primary flex flex-row-reverse gap-8 my-nav-section items-center transition-transform duration-300 ease-in-out relative delay-100 ${
+        className={`z-50 bg-primary flex flex-row-reverse gap-2 sm:gap-4 md:gap-8 my-nav-section items-center transition-transform duration-300 ease-in-out relative delay-100 ${
           show ? "translate-y-0" : "shadow-lg translate-y-[-100%]"
         }`}
       >

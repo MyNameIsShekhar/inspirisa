@@ -9,7 +9,9 @@ export default function Footer() {
       <section className="grid grid-cols-2  md:grid-cols-4 gap-8 ">
         <Connect />
         <QuickLinks />
-        <QuickLinks />
+        <div className="hidden md:block">
+          <QuickLinks />
+        </div>
         <Subscribe />
       </section>
       <Separator className="bg-muted-foreground" />
