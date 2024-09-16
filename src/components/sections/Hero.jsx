@@ -41,7 +41,7 @@ function MainHero() {
             <span className="text-heading-5 font-medium">Global Community</span>
             <i className="font-playfair">Since 2017</i>
           </div>
-          <h1 className="text-display-4 sm:text-display-5 font-playfair">
+          <h1 className="text-display-5 sm:text-display-3 font-playfair">
             EMPOWERING{" "}
             <span>
               <span className="text-primary">
