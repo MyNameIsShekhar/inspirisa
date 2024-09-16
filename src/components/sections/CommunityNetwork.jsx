@@ -3,8 +3,8 @@ import React from "react";
 export default function CommunityNetwork() {
   return (
     <section className="text-center my-section space-y-4">
-      <p className="text-heading-4">GLOBAL</p>
-      <h1 className="text-heading-1 text-primary underline-offset-4 underline">
+      <h4 className="text-heading-4">GLOBAL</h4>
+      <h1 className="text-heading-1 text-primary underline-offset-4 underline font-playfair">
         COMMUNITY NETWORK
       </h1>
       <p className="px-4 sm:px-8 md:px-16">

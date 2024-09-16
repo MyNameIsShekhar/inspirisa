@@ -4,6 +4,10 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      backgroundImage: {
+        "custom-pattern":
+          "linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url('/pattern.svg')",
+      },
       fontFamily: {
         playfair: ['"Playfair Display"', "serif"],
         pinyon: ['"Pinyon Script"', "cursive"],
