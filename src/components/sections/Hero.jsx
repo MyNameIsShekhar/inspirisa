@@ -18,9 +18,21 @@ export default function Hero() {
             OUR BUSINESS PARTNERS
           </h3>
           <div className="flex">
-            <img src="/hero/partner.png" alt="partner" />
-            <img src="/hero/partner.png" alt="partner" />
-            <img src="/hero/partner.png" alt="partner" />
+            <img
+              src="/hero/partner.png"
+              alt="partner"
+              className="h-12 sm:h-20"
+            />
+            <img
+              src="/hero/partner.png"
+              alt="partner"
+              className="h-12 sm:h-20"
+            />
+            <img
+              src="/hero/partner.png"
+              alt="partner"
+              className="h-12 sm:h-20"
+            />
           </div>
         </div>
         <h1 className="text-center text-display-5 font-playfair text-primary">
@@ -46,7 +58,7 @@ function MainHero() {
             <span>
               <span className="text-primary">
                 {" "}
-                <span className="font-pinyon  text-[92px] mr-4">W</span>
+                <span className="font-pinyon text-display-4 mr-4">W</span>
                 <span>OMEN</span>{" "}
               </span>{" "}
               <i>through</i>
