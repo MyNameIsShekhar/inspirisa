@@ -100,7 +100,7 @@ function MainHero() {
             </TooltipProvider>
           </div>
         </div>
-        <div className="hidden lg:block bg-[url('/white_logo.svg')] bg-no-repeat bg-center bg-cover">
+        <div className="hidden md:flex bg-[url('/white_logo.svg')] bg-no-repeat bg-center bg-cover items-center justify-center">
           <img src="/hero/frame.png" alt="" />
         </div>
       </section>
