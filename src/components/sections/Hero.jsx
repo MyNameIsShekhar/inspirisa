@@ -50,9 +50,9 @@ function MainHero() {
           <div className="flex items-center gap-4">
             <Button
               variant="outline"
-              className="border-primary text-primary hover:bg-primary-foreground rounded-full py-6"
+              className="border-primary text-primary hover:bg-primary-foreground rounded-full py-6 hover:text-primary"
             >
-              EXPLORE MORE{" "}
+              EXPLORE MORE
               <div className="rounded-full bg-primary h-8 w-8 flex items-center justify-center ml-4">
                 <FontAwesomeIcon
                   icon={faArrowRight}

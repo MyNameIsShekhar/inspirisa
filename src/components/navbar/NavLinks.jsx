@@ -4,7 +4,7 @@ import { Button } from "../ui/button";
 
 export default function NavLinks() {
   return (
-    <div className="flex gap-4">
+    <div className="flex flex-col lg:flex-row gap-4 items-start lg:items-center">
       {links.map((link, index) => (
         <Button
           key={index}

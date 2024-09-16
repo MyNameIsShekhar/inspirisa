@@ -1,6 +1,8 @@
-import { Button } from "@/components/ui/button";
+import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 import NavLinks from "./NavLinks";
+import MobileNav from "./MobileNav";
 
 const links = [
   { path: "/temp", label: "CONTACT" },
@@ -8,9 +10,40 @@ const links = [
 ];
 
 export default function Navbar() {
+  const [show, setShow] = useState(true);
+  const [lastScrollTop, setLastScrollTop] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+      if (scrollTop > lastScrollTop) {
+        setShow(false);
+      } else {
+        setShow(true);
+      }
+
+      setLastScrollTop(scrollTop <= 0 ? 0 : scrollTop);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [lastScrollTop]);
+
   return (
-    <nav className="sticky top-0 z-50">
-      <section className="bg-primary flex flex-row-reverse gap-8 my-nav-section items-center">
+    <nav
+      className={`sticky top-0 z-30 transition-transform duration-300 ease-in-out delay-200 ${
+        show ? "translate-y-0" : "translate-y-[-100%]"
+      }`}
+    >
+      <section
+        className={`z-50 bg-primary flex flex-row-reverse gap-8 my-nav-section items-center transition-transform duration-300 ease-in-out relative delay-100 ${
+          show ? "translate-y-0" : "translate-y-[-100%]"
+        }`}
+      >
         <Button variant="secondary" className="text-button rounded-full">
           CRATE AN ACCOUNT
         </Button>
@@ -31,12 +64,21 @@ export default function Navbar() {
           </Button>
         ))}
       </section>
-      <section className="flex items-center justify-between my-nav-section bg-background">
+      <section
+        className={`z-40 flex items-center justify-between my-nav-section bg-background transition-transform duration-300 ease-in-out delay-0 relative ${
+          show ? "translate-y-0" : "translate-y-[-200%]"
+        }`}
+      >
         <div>
           <img src="/nav_logo.svg" alt="" className="h-12" />
         </div>
         <div>
-          <NavLinks />
+          <div className="hidden lg:block">
+            <NavLinks />
+          </div>
+          <div className="lg:hidden">
+            <MobileNav />
+          </div>
         </div>
       </section>
     </nav>
