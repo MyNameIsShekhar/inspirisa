@@ -19,6 +19,7 @@
     /* Primary colors */
     --primary: 289 72% 35%; /* #6A1B9A */
     --primary-foreground: 296 43% 95%; /* #F3E5F5 (lighter shade to contrast with primary) */
+    --primary-dark: 251 84% 15%; /* #F3E5F5 (lighter shade to contrast with primary) */
 
     /* Secondary (derived for a softer accent) */
     --secondary: 270 20% 88%; /* Soft lavender for secondary elements */
@@ -60,9 +61,12 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground font-roboto;
+    @apply bg-background text-foreground font-roboto font-light;
+  }
+  .my-nav-section {
+    @apply py-2 px-2 sm:px-4 md:px-8;
   }
   .my-section {
-    @apply px-8 py-2;
+    @apply py-2 px-4 sm:px-8 md:px-16;
   }
 }

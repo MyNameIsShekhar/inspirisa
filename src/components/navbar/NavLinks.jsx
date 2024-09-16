@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { Button } from "../ui/button";
 
-const links = [
+export const links = [
   { path: "/", label: "Home" },
   { path: "/temp", label: "COURSES" },
   { path: "/temp", label: "CERTIFICATIONS" },
@@ -18,7 +18,7 @@ export default function NavLinks() {
         <Button
           key={index}
           variant="link"
-          className="text-foreground has-[.pending]:text-muted-foreground has-[.active]:decoration-primary has-[.active]:underline has-[.active]:underline-offset-4 p-0 h-fit"
+          className="text-button text-foreground has-[.pending]:text-muted-foreground has-[.active]:decoration-primary has-[.active]:underline has-[.active]:underline-offset-4 p-0 h-fit "
         >
           <NavLink
             to={link.path}

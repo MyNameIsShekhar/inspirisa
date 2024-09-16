@@ -9,6 +9,21 @@ export default {
         pinyon: ['"Pinyon Script"', "cursive"],
         roboto: ['"Roboto"', "sans-serif"],
       },
+      fontSize: {
+        "display-1": ["80px", { lineHeight: "1.1" }],
+        "display-2": ["72px", { lineHeight: "1.1" }],
+        "display-3": ["64px", { lineHeight: "1.2" }],
+        "display-4": ["56px", { lineHeight: "1.2" }],
+        "display-5": ["48px", { lineHeight: "1.3" }],
+        "heading-1": ["40px", { lineHeight: "1.3" }],
+        "heading-2": ["32px", { lineHeight: "1.4" }],
+        "heading-3": ["28px", { lineHeight: "1.4" }],
+        "heading-4": ["24px", { lineHeight: "1.5" }],
+        "heading-5": ["20px", { lineHeight: "1.5" }],
+        "body-1": ["16px", { lineHeight: "1.6" }],
+        "body-2": ["14px", { lineHeight: "1.6" }],
+        button: ["14px", { lineHeight: "1.5" }],
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
@@ -28,6 +43,7 @@ export default {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          dark: "hsl(var(--primary-dark))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
