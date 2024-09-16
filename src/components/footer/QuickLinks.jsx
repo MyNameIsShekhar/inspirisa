@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import { links } from "../navbar/NavLinks";
 import { Button } from "../ui/button";
+import { links } from "@/data/links";
 
 export default function QuickLinks() {
   return (
