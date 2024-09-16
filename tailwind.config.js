@@ -8,6 +8,9 @@ export default {
         "custom-pattern":
           "linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url('/pattern.svg')",
       },
+      listStyleImage: {
+        "custom-arrow": "url('/list_arrow.svg')", // Path to your SVG
+      },
       fontFamily: {
         playfair: ['"Playfair Display"', "serif"],
         pinyon: ['"Pinyon Script"', "cursive"],
