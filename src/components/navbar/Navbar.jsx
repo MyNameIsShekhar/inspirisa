@@ -41,7 +41,7 @@ export default function Navbar() {
     >
       <section
         className={`z-50 bg-primary flex flex-row-reverse gap-8 my-nav-section items-center transition-transform duration-300 ease-in-out relative delay-100 ${
-          show ? "translate-y-0" : "translate-y-[-100%]"
+          show ? "translate-y-0" : "shadow-lg translate-y-[-100%]"
         }`}
       >
         <Button variant="secondary" className="text-button rounded-full">
