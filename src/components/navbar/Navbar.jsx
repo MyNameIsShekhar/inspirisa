@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
-import { Button } from "@/components/ui/button";
 import NavLinks from "./NavLinks";
 import MobileNav from "./MobileNav";
 
@@ -44,9 +43,6 @@ export default function Navbar() {
           show ? "translate-y-0" : "shadow-lg translate-y-[-100%]"
         }`}
       >
-        <Button variant="secondary" className="text-button rounded-full">
-          CRATE AN ACCOUNT
-        </Button>
         {links.map((link, index) => (
           <Button
             key={index}
