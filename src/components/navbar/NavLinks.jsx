@@ -1,14 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { links } from "@/data/links";
-import { Badge } from "@/components/ui/badge";
-
-export function BadgeSecondary({ children }) {
-  return <Badge variant="secondary">{children}</Badge>;
-}
-
-export function BadgeOutline({ children }) {
-  return <Badge variant="outline">{children}</Badge>;
-}
+import { BadgeSecondary, BadgeOutline } from "@/components/ui/badge";
 
 export default function NavLinks() {
   return (
