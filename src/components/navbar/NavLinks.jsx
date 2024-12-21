@@ -1,10 +1,13 @@
 import { NavLink } from "react-router-dom";
 import { links } from "@/data/links";
-import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
 export function BadgeSecondary({ children }) {
   return <Badge variant="secondary">{children}</Badge>;
+}
+
+export function BadgeOutline({ children }) {
+  return <Badge variant="outline">{children}</Badge>;
 }
 
 export default function NavLinks() {
@@ -22,9 +25,7 @@ export default function NavLinks() {
             isActive ? (
               <BadgeSecondary>{link.label}</BadgeSecondary>
             ) : (
-              <Button variant="link" className="text-button text-foreground p-0 h-fit">
-                {link.label}
-              </Button>
+              <BadgeOutline>{link.label}</BadgeOutline>
             )
           )}
         </NavLink>
