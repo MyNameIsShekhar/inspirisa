@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 import NavLinks from "./NavLinks";
 import MobileNav from "./MobileNav";
 
