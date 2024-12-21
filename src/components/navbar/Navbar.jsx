@@ -39,28 +39,7 @@ export default function Navbar() {
         show ? "translate-y-0" : "translate-y-[-100%]"
       }`}
     >
-      <section
-        className={`z-50 bg-primary flex flex-row-reverse gap-2 sm:gap-4 md:gap-8 my-nav-section items-center transition-transform duration-300 ease-in-out relative delay-100 ${
-          show ? "translate-y-0" : "shadow-lg translate-y-[-100%]"
-        }`}
-      >
-        {links.map((link, index) => (
-          <Button
-            key={index}
-            variant="link"
-            className="text-button text-background has-[.pending]:text-muted-foreground has-[.active]:decoration-primary-foreground has-[.active]:underline has-[.active]:underline-offset-4 p-0 h-fit"
-          >
-            <NavLink
-              to={link.path}
-              className={({ isActive, isPending }) =>
-                isPending ? "pending" : isActive ? "active w-full" : ""
-              }
-            >
-              {link.label}
-            </NavLink>
-          </Button>
-        ))}
-      </section>
+      
       <section
         className={`z-40 flex items-center justify-between my-nav-section bg-background transition-transform duration-300 ease-in-out delay-0 relative ${
           show ? "translate-y-0" : "translate-y-[-200%]"
