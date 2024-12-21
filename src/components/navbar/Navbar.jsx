@@ -46,7 +46,7 @@ export default function Navbar() {
         }`}
       >
         <div>
-          <img src="/nav_logo.svg" alt="" className="h-12" />
+          <span className="h-12 text-2xl font-bold">Rugi Empire</span>
         </div>
         <div>
           <div className="hidden lg:block">
