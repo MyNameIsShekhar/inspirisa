@@ -46,7 +46,7 @@ export default function Navbar() {
         }`}
       >
         <div>
-          <span className="h-12 text-2xl font-bold">Rugi Empire</span>
+          <span className="h-12 text-2xl font-bold" style={{ fontFamily: 'Lobster, sans-serif' }}>Rugi Empire</span>
         </div>
         <div>
           <div className="hidden lg:block">
