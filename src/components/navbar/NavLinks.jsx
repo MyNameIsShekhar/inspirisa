@@ -10,16 +10,23 @@ export default function NavLinks() {
   return (
     <div className="flex flex-col lg:flex-row gap-4 items-start lg:items-center">
       {links.map((link, index) => (
-        <ButtonSecondary key={index}>
-          <NavLink
-            to={link.path}
-            className={({ isActive, isPending }) =>
-              isPending ? "pending" : isActive ? "active w-full" : ""
-            }
-          >
-            {link.label}
-          </NavLink>
-        </ButtonSecondary>
+        <NavLink
+          to={link.path}
+          key={index}
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "active w-full" : ""
+          }
+        >
+          {({ isActive }) => (
+            isActive ? (
+              <ButtonSecondary>{link.label}</ButtonSecondary>
+            ) : (
+              <Button variant="link" className="text-button text-foreground p-0 h-fit">
+                {link.label}
+              </Button>
+            )
+          )}
+        </NavLink>
       ))}
     </div>
   );
