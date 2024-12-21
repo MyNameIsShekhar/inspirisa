@@ -14,7 +14,7 @@ export default function NavLinks() {
           <NavLink
             to={link.path}
             className={({ isActive, isPending }) =>
-              isPending ? "pending" : isActive ? "active w-full" : ""
+              isPending ? "pending" : isActive ? "active w-full text-pink-500 bg-gray-200 border-b-4 border-pink-500 rounded-md px-2 py-1 transition-all duration-300" : ""
             }
           >
             {link.label}
