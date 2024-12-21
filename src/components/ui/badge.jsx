@@ -1,35 +1,32 @@
-import { NavLink } from "react-router-dom";
-import { links } from "@/data/links";
-import { Badge } from "@/components/ui/badge";
+import React from "react";
+import { cva } from "class-variance-authority";
 
-export function BadgeSecondary({ children }) {
-  return <Badge variant="secondary">{children}</Badge>;
-}
+import { cn } from "@/lib/utils";
 
-export function BadgeOutline({ children }) {
-  return <Badge variant="outline">{children}</Badge>;
-}
+const badgeVariants = cva(
+  "inline-flex items-center border rounded-full px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
+  {
+    variants: {
+      variant: {
+        default:
+          "bg-primary hover:bg-primary/80 border-transparent text-primary-foreground",
+        secondary:
+          "bg-secondary hover:bg-secondary/80 border-transparent text-secondary-foreground",
+        destructive:
+          "bg-destructive hover:bg-destructive/80 border-transparent text-destructive-foreground",
+        outline: "text-foreground",
+      },
+    },
+    defaultVariants: {
+      variant: "default",
+    },
+  }
+);
 
-export default function NavLinks() {
+function Badge({ className, variant, ...props }) {
   return (
-    <div className="flex flex-col lg:flex-row gap-4 items-start lg:items-center">
-      {links.map((link, index) => (
-        <NavLink
-          to={link.path}
-          key={index}
-          className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "active w-full" : ""
-          }
-        >
-          {({ isActive }) => (
-            isActive ? (
-              <BadgeSecondary>{link.label}</BadgeSecondary>
-            ) : (
-              <BadgeOutline>{link.label}</BadgeOutline>
-            )
-          )}
-        </NavLink>
-      ))}
-    </div>
+    <div className={cn(badgeVariants({ variant }), className)} {...props} />
   );
 }
+
+export { Badge, badgeVariants };
